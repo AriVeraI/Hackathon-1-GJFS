@@ -1,37 +1,37 @@
-document.addEventListener("DOMContentLoaded", () => {
-    cargarServiciosTestimonios();
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//     cargarServiciosTestimonios();
+// });
 
-async function cargarServiciosTestimonios() {
+// async function cargarServiciosTestimonios() {
 
-    const contenedorServicios = document.getElementById("servicios");
+//     const contenedorServicios = document.getElementById("servicios");
 
-    if (!contenedorServicios) {
-        console.warn("No se encontró el contenedor con el ID 'servicios'.");
+//     if (!contenedorServicios) {
+//         console.warn("No se encontró el contenedor con el ID 'servicios'.");
 
-    try {
+//     try {
 
-        const respuesta = await fetch("serviciostestimonios.html");
+//         const respuesta = await fetch("serviciostestimonios.html");
 
-        if (!respuesta.ok) {
-            throw new Error(`Error al cargar el archivo: ${respuesta.status} ${respuesta.statusText}`);
-        }
+//         if (!respuesta.ok) {
+//             throw new Error(`Error al cargar el archivo: ${respuesta.status} ${respuesta.statusText}`);
+//         }
 
-        const html = await respuesta.text();
-        contenedorServicios.innerHTML = html;
+//         const html = await respuesta.text();
+//         contenedorServicios.innerHTML = html;
 
-    } catch (error) {
+//     } catch (error) {
 
-        console.error(error);
+//         console.error(error);
 
-        contenedorServicios.innerHTML = `
-            <div class="alert alert-danger m-3">
-                Error al cargar el archivo.
-            </div>
-        `;
-    }
-}
-}
+//         contenedorServicios.innerHTML = `
+//             <div class="alert alert-danger m-3">
+//                 Error al cargar el archivo.
+//             </div>
+//         `;
+//     }
+// }
+// }
 
 
 let carrito = [];
@@ -152,6 +152,63 @@ async function cargarPrecios() {
         contenedorNavbar.innerHTML = `<div class="alert alert-danger m-3">Error al cargar precios.</div>`;
     }
 }
+
+
+//NUEVA FUNCIÓN DE PRUEBA PARA SERVICIOS DE YAZ
+
+document.addEventListener("DOMContentLoaded", () => {
+    cargarServicios();
+});
+async function cargarServicios() {
+    const contenedorServicios = document.getElementById("servicios");
+    
+    if (!contenedorServicios) {
+        console.warn("No se encontró el contenedor con el ID 'servicios'.");
+        return;
+    }
+    try {
+        const respuesta = await fetch("serviciostestimonios.html");
+        
+        if (!respuesta.ok) {
+            throw new Error(`Error al cargar el servicios y testimonios: ${respuesta.status} ${respuesta.statusText}`);
+        }
+        
+        const html = await respuesta.text();
+        contenedorServicios.innerHTML = html;
+        
+    } catch (error) {
+        console.error("Hubo un problema al cargar el archivo de Servicios y testimonios:", error);
+        contenedorNavbar.innerHTML = `<div class="alert alert-danger m-3">Error al cargar serviciosytestimonios.</div>`;
+    }
+}
+
+//FUNCIÓN MARI
+document.addEventListener("DOMContentLoaded", () => {
+    cargarContacto();
+});
+async function cargarContacto() {
+    const contenedorContacto = document.getElementById("contacto");
+    
+    if (!contenedorContacto) {
+        console.warn("No se encontró el contenedor con el ID 'contacto'.");
+        return;
+    }
+    try {
+        const respuesta = await fetch("contacto.html");
+        
+        if (!respuesta.ok) {
+            throw new Error(`Error al cargar el contacto: ${respuesta.status} ${respuesta.statusText}`);
+        }
+        
+        const html = await respuesta.text();
+        contenedorContacto.innerHTML = html;
+        
+    } catch (error) {
+        console.error("Hubo un problema al cargar el archivo de Contacto:", error);
+        contenedorNavbar.innerHTML = `<div class="alert alert-danger m-3">Error al cargarContacto.</div>`;
+    }
+}
+
 
 
 //FUNCIÓN PARA CARRUSEL DE LOS GIF
