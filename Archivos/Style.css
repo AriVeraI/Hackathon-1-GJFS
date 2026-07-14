@@ -1,0 +1,142 @@
+body{
+    background-color: black;
+}
+
+#h1prod{
+    text-align: center;
+    color:#D4F151;
+    font-size: 45px;
+    font-weight: 800;
+    margin-top: 45px;
+    font-family:'Montserrat', sans-serif;
+    margin-bottom: 15px;
+}
+
+#h2prod{
+    text-align: center;
+    color:#D4F151;
+    font-size: 45px;
+    font-weight: 800;
+    margin-top: 25px;
+    font-family:'Montserrat', sans-serif;
+    margin-bottom: 15px;
+}
+
+#textcol{
+    color: white;
+    text-align: center;
+    margin-bottom: 25px;
+    font-family:'Inter', sans-serif;
+}
+
+#textcol2{
+    color: black;
+    text-align: center;
+    margin-bottom: 25px;
+    font-family:'Inter', sans-serif;
+}
+
+#productdesing{
+    background-color: #2A2A2A;
+    padding: 12px;
+    border-color: #D4F151;
+    border-radius: 4px;
+    border-width: 1px;
+
+}
+
+#productdesing:hover{
+    transform: scale(1.05);
+}
+
+
+
+#titproduc{
+    text-align: center;
+    color:#D4F151;
+    font-size:22px;
+    font-family:'Montserrat', sans-serif;
+}
+
+#cardtextpro{
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+#botnhover:hover{
+    transform: scale(1.05);
+}
+
+
+/* Ajustes para móvil */
+@media (max-width: 768px) {
+
+    /* Separación entre cards */
+    .col-md-4 {
+        margin-bottom: 25px;
+    }
+
+  
+    #h1prod {
+        font-size: 28px;
+        line-height: 1.2;
+        padding: 0 15px;
+    }
+
+    #h2prod {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+   
+    #textcol {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    #cardtextpro {
+        font-size: 14px;
+    }
+
+    #titproduc {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 14px !important;
+    }
+
+    
+    #productdesing {
+        width: 100% !important;
+    }
+
+    /* Imagen con texto encima */
+    .position-relative.d-inline-block {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .position-relative img {
+        width: 100%;
+        height: auto;
+    }
+
+    .position-absolute {
+        width: 90%;
+        padding: 10px !important;
+    }
+
+    .position-absolute #h1prod {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .position-absolute #textcol {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+}
