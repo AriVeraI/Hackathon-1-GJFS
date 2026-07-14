@@ -1,0 +1,26 @@
+
+
+/* Animaciones para las cards de precos/planes */
+#card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza el movimiento */
+    border: 2px solid transparent; /* Preparado para el color de contraste */
+}
+
+#card:hover {
+    transform: translateY(-15px); /* Eleva la tarjeta 10 píxeles */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Crea una sombra profunda */
+    border-color: #d4f151; /* El color de tu paleta resalta el borde al hacer hover */
+}
+
+.card-text-precios {
+    text-align: justify;
+}
+
+.btn-primary-yellow{
+    background-color: #d4f151;
+    color: black;
+}
+
+/* #precios{
+    background-color: black;
+} */
