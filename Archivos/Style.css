@@ -1,0 +1,13 @@
+.card {
+    border-radius: 0 !important;
+}
+
+.form-control, .form-select, .btn {
+    border-radius: 0 !important;
+}
+
+/* Asegurar que el focus en los inputs se vea verde */
+.form-control:focus, .form-select:focus {
+    border-color: #D4F151 !important;
+    box-shadow: none !important;
+}
