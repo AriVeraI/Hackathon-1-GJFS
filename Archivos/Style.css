@@ -1,0 +1,467 @@
+#titulo-somos {
+    text-align: center;
+    color: #D4F151;
+    font-size: 45px;
+    padding-top: 20px;
+}
+
+.fondo-somos {
+    background-image: url("imagenesK/fondo.jpg");
+    background-size: cover;     
+    background-position: center; 
+    background-repeat: no-repeat;
+    min-height: 1200px;          
+}
+
+#texto-somos {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.parrafo-somos {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.parrafo-final-somos {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding-bottom: 40px;
+}
+/* monserrat
+inter */
+.imagen-somos {
+    height: 300px;
+}
+
+.titulo-imagenes {
+    font-size: 25px;
+    color: black;
+}
+
+.parrafo-imagenes {
+    font-size: 16px;
+}
+
+#imagen-somos {
+    background-size: cover
+}
+
+.contenedor-somos {
+    padding-top: 50px;
+}
+
+.parrafo-somos2 {
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    padding: 20px 45px;
+}
+
+
+/* ===========================
+   RESPONSIVE PARA MÓVILES
+=========================== */
+@media (max-width: 768px) {
+
+    /* Imagen de fondo */
+    #imagen-somos{
+        min-height: 100%;
+        object-fit: cover;
+    }
+
+    /* Overlay */
+    .card-img-overlay{
+        padding: 20px;
+    }
+
+    /* Título */
+    #titulo-somos{
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Primer párrafo */
+    #texto-somos{
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+
+    /* Párrafos */
+    .parrafo-somos{
+        font-size: .95rem;
+        line-height: 1.7;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+    /* Tarjetas */
+    .card{
+        margin-bottom: 20px;
+    }
+
+    /* Imágenes de las tarjetas */
+    .imagen-somos{
+        height: 180px;
+        object-fit: cover;
+    }
+
+    /* Títulos de las tarjetas */
+    .titulo-imagenes{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    /* Texto de las tarjetas */
+    .parrafo-imagenes{
+        font-size: .9rem;
+        text-align: justify;
+    }
+
+}
+
+
+
+.card {
+    border-radius: 0 !important;
+}
+
+.form-control, .form-select, .btn {
+    border-radius: 0 !important;
+}
+
+/* Asegurar que el focus en los inputs se vea verde */
+.form-control:focus, .form-select:focus {
+    border-color: #D4F151 !important;
+    box-shadow: none !important;
+}
+
+
+/* Animaciones para las cards de precos/planes */
+#card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza el movimiento */
+    border: 2px solid transparent; /* Preparado para el color de contraste */
+}
+
+#card:hover {
+    transform: translateY(-15px); /* Eleva la tarjeta 10 píxeles */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Crea una sombra profunda */
+    border-color: #d4f151; /* El color de tu paleta resalta el borde al hacer hover */
+}
+
+.card-text-precios {
+    text-align: justify;
+}
+
+.btn-primary-yellow{
+    background-color: #d4f151;
+    color: black;
+}
+
+/* #precios{
+    background-color: black;
+} */
+
+
+
+#contenedor-negro{
+    background-color: black;
+}
+
+#h1prod{
+    text-align: center;
+    color:#D4F151;
+    font-size: 45px;
+    font-weight: 800;
+    margin-top: 45px;
+    font-family:'Montserrat', sans-serif;
+    margin-bottom: 15px;
+}
+
+#h2prod{
+    text-align: center;
+    color:#D4F151;
+    font-size: 45px;
+    font-weight: 800;
+    margin-top: 25px;
+    font-family:'Montserrat', sans-serif;
+    margin-bottom: 15px;
+}
+
+#textcol{
+    color: white;
+    text-align: center;
+    margin-bottom: 25px;
+    font-family:'Inter', sans-serif;
+}
+
+#textcol2{
+    color: black;
+    text-align: center;
+    margin-bottom: 25px;
+    font-family:'Inter', sans-serif;
+}
+
+#productdesing{
+    background-color: #2A2A2A;
+    padding: 12px;
+    border-color: #D4F151;
+    border-radius: 4px;
+    border-width: 1px;
+
+}
+
+#productdesing:hover{
+    transform: scale(1.05);
+}
+
+
+
+#titproduc{
+    text-align: center;
+    color:#D4F151;
+    font-size:22px;
+    font-family:'Montserrat', sans-serif;
+}
+
+#cardtextpro{
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+#botnhover:hover{
+    transform: scale(1.05);
+}
+
+
+/* Ajustes para móvil */
+@media (max-width: 768px) {
+
+    /* Separación entre cards */
+    .col-md-4 {
+        margin-bottom: 25px;
+    }
+
+  
+    #h1prod {
+        font-size: 28px;
+        line-height: 1.2;
+        padding: 0 15px;
+    }
+
+    #h2prod {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+   
+    #textcol {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    #cardtextpro {
+        font-size: 14px;
+    }
+
+    #titproduc {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 14px !important;
+    }
+
+    
+    #productdesing {
+        width: 100% !important;
+    }
+
+    /* Imagen con texto encima */
+    .position-relative.d-inline-block {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .position-relative img {
+        width: 100%;
+        height: auto;
+    }
+
+    .position-absolute {
+        width: 90%;
+        padding: 10px !important;
+    }
+
+    .position-absolute #h1prod {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .position-absolute #textcol {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Fijar la barra de navegación arriba / */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+/* / Estilo para que cada sección ocupe toda la pantalla / */
+.section {
+    min-height: 100vh; 
+    padding: 80px 20px 20px 20px; 
+    box-sizing: border-box;
+}
+
+/* / Colores aleatorios para distinguir las secciones */ */
+#inicio { background-color: #f4f4f4; }
+#servicios { background-color: #e2e2e2; }
+#proyectos { background-color: #d1d1d1; }
+#contacto { background-color: #c0c0c0; }
+.menu-item{
+    font-weight:600;
+    color:black !important;
+    margin:0 10px;
+    transition:.3s;
+    position:relative;
+}
+.menu-item:hover{
+    color:#666 !important;
+}
+.menu-item::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:0;
+    width:0;
+    height:2px;
+    background:black;
+    transition:.3s;
+    transform:translateX(-50%);
+}
+.menu-item:hover::after{
+    width:80%;
+}
+.search-box{
+    display:flex;
+    align-items:center;
+    background:#f5f5f5;
+    border-radius:30px;
+    padding:8px 15px;
+    transition:.3s;
+}
+.search-box:hover{
+    background:#e7e7e7;
+}
+.search-box input{
+    border:none;
+    background:transparent;
+    outline:none;
+    width:150px;
+    margin-left:8px;
+}
+.icon-button{
+    color:black;
+    text-decoration:none;
+    font-size:23px;
+    transition:.3s;
+}
+.icon-button:hover{
+    color:#666;
+    transform:scale(1.15);
+}
+.carousel-indicators .dot {
+    width: 6px !important;
+    height: 6px !important;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    border-radius: 50% !important;
+    border: none !important;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+.carousel-indicators .dot.active {
+    background-color: white !important;
+    transform: scale(1.2);
+}
+
+.style-control-btn {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    color: white;
+    transition: all 0.2s ease;
+}
+.style-control-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+.estilo-titulo-footer1 {
+    font-family: 'Montserrat', sans-serif; /* Aplica la fuente */
+    font-size: 21px;                     /* Define el tamaño exacto */
+    /* color: #D4F151;                      Opcional: para que combine con tu color verde */
+}
+
+.estilo-titulo-footer2 {
+    font-family: 'Montserrat', sans-serif; /* Aplica la fuente */
+    font-size: 18px;                     /* Define el tamaño exacto */
+    /* color: #D4F151;                      Opcional: para que combine con tu color verde */
+}
+
+.estilo-titulo-footer3 {
+    font-family: 'Montserrat', sans-serif; /* Aplica la fuente */
+    font-size: 19px;                     /* Define el tamaño exacto */
+    font-weight: bold; /* Esta línea añade la negrita */
+    /* color: #D4F151;                      Opcional: para que combine con tu color verde */
+}
+
+.estilo-titulo-footer4 {
+    font-family: 'Montserrat', sans-serif; /* Aplica la fuente */
+    font-size: 16px;                     /* Define el tamaño exacto */
+    /* color: #D4F151;                      Opcional: para que combine con tu color verde */
+}

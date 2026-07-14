@@ -1,0 +1,54 @@
+<section id="inicio-hero" class="position-relative vh-100 w-100 overflow-hidden text-center text-white">
+    
+    <div id="carouselGifs" class="carousel slide h-100 w-100" data-bs-ride="false" data-bs-interval="false">
+        
+
+        <div class="carousel-indicators mb-4 z-2">
+            <button type="button" data-bs-target="#carouselGifs" data-bs-slide-to="0" class="active dot" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselGifs" data-bs-slide-to="1" class="dot" aria-label="Slide 2"></button>
+        </div>
+
+        <div class="carousel-inner h-100 w-100">
+            <!-- Slide 1 -->
+            <div class="carousel-item active h-100 w-100">
+                <img src="images/vexa_logo.png" class="d-block w-100 h-100 object-fit-cover item-gif" data-index="0" alt="Fondo Animado 1">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-25"></div>
+            </div>
+
+            <div class="carousel-item h-100 w-100">
+                <img src="images/vexa_logo.png" class="d-block w-100 h-100 object-fit-cover item-gif" data-index="1" alt="Fondo Animado 2">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-25"></div>
+            </div>
+        </div>
+
+        <div class="position-absolute top-50 start-50 translate-middle z-1 d-flex flex-column align-items-center justify-content-center w-100 p-3">
+            <h6 class="text-uppercase tracking-wide mb-2" style="font-size: 0.9rem; font-weight: 500;">
+                Colección para toda la vida
+            </h6>
+            <h1 class="display-1 fw-black text-uppercase mb-3" style="font-family: 'Arial Black', Impact, sans-serif; letter-spacing: -1px;">
+                Estilo Cada Día
+            </h1>
+            <p class="lead mb-4" style="font-size: 1.1rem; max-width: 600px;">
+                Todo tu estilo, toda tu salud.
+            </p>
+            <a href="precios.html" class="btn btn-light rounded-pill px-4 py-2 fw-bold text-black border-0 v-btn-comprar">
+                Explorar
+            </a>
+        </div>
+
+        <div class="position-absolute bottom-0 end-0 m-4 z-3 d-flex align-items-center gap-2">
+            <button id="btn-pausa" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center style-control-btn" type="button" title="Detener/Reproducir">
+                <i id="icono-pausa" class="bi bi-stop-fill fs-5"></i>
+            </button>
+    
+            <button class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center style-control-btn" type="button" data-bs-target="#carouselGifs" data-bs-slide="prev" title="Anterior">
+                <i class="bi bi-chevron-left fs-5"></i>
+            </button>
+    
+            <button class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center style-control-btn" type="button" data-bs-target="#carouselGifs" data-bs-slide="next" title="Siguiente">
+                <i class="bi bi-chevron-right fs-5"></i>
+            </button>
+        </div>
+
+    </div>
+</section>
