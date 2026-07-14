@@ -5,6 +5,14 @@
     padding-top: 20px;
 }
 
+.fondo-somos {
+    background-image: url("imagenesK/fondo.jpg");
+    background-size: cover;     
+    background-position: center; 
+    background-repeat: no-repeat;
+    min-height: 1200px;          
+}
+
 #texto-somos {
     text-align: center;
     color: white;
@@ -17,6 +25,13 @@
     color: white;
     font-size: 16px;
     padding-bottom: 20px;
+}
+
+.parrafo-final-somos {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding-bottom: 40px;
 }
 /* monserrat
 inter */
