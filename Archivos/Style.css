@@ -140,3 +140,118 @@ body{
         margin-bottom: 10px;
     }
 }
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menu-item{
+    font-weight:600;
+    color:black !important;
+    margin:0 10px;
+    transition:.3s;
+    position:relative;
+}
+.menu-item:hover{
+    color:#666 !important;
+}
+.menu-item::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:0;
+    width:0;
+    height:2px;
+    background:black;
+    transition:.3s;
+    transform:translateX(-50%);
+}
+.menu-item:hover::after{
+    width:80%;
+}
+.search-box{
+    display:flex;
+    align-items:center;
+    background:#f5f5f5;
+    border-radius:30px;
+    padding:8px 15px;
+    transition:.3s;
+}
+.search-box:hover{
+    background:#e7e7e7;
+}
+.search-box input{
+    border:none;
+    background:transparent;
+    outline:none;
+    width:150px;
+    margin-left:8px;
+}
+.icon-button{
+    color:black;
+    text-decoration:none;
+    font-size:23px;
+    transition:.3s;
+}
+.icon-button:hover{
+    color:#666;
+    transform:scale(1.15);
+}
+.carousel-indicators .dot {
+    width: 6px !important;
+    height: 6px !important;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    border-radius: 50% !important;
+    border: none !important;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+.carousel-indicators .dot.active {
+    background-color: white !important;
+    transform: scale(1.2);
+}
+
+.style-control-btn {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    color: white;
+    transition: all 0.2s ease;
+}
+.style-control-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+.estilo-titulo-footer1 {
+    font-family: 'Montserrat', sans-serif; /* Aplica la fuente */
+    font-size: 21px;                     /* Define el tamaño exacto */
+    /* color: #D4F151;                      Opcional: para que combine con tu color verde */
+}
+
+.estilo-titulo-footer2 {
+    font-family: 'Montserrat', sans-serif; /* Aplica la fuente */
+    font-size: 18px;                     /* Define el tamaño exacto */
+    /* color: #D4F151;                      Opcional: para que combine con tu color verde */
+}
+
+.estilo-titulo-footer3 {
+    font-family: 'Montserrat', sans-serif; /* Aplica la fuente */
+    font-size: 19px;                     /* Define el tamaño exacto */
+    font-weight: bold; /* Esta línea añade la negrita */
+    /* color: #D4F151;                      Opcional: para que combine con tu color verde */
+}
+
+.estilo-titulo-footer4 {
+    font-family: 'Montserrat', sans-serif; /* Aplica la fuente */
+    font-size: 16px;                     /* Define el tamaño exacto */
+    /* color: #D4F151;                      Opcional: para que combine con tu color verde */
+}
