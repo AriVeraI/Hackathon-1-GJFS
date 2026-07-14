@@ -1,3 +1,133 @@
+#titulo-somos {
+    text-align: center;
+    color: #D4F151;
+    font-size: 45px;
+    padding-top: 20px;
+}
+
+.fondo-somos {
+    background-image: url("imagenesK/fondo.jpg");
+    background-size: cover;     
+    background-position: center; 
+    background-repeat: no-repeat;
+    min-height: 1200px;          
+}
+
+#texto-somos {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.parrafo-somos {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.parrafo-final-somos {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding-bottom: 40px;
+}
+/* monserrat
+inter */
+.imagen-somos {
+    height: 300px;
+}
+
+.titulo-imagenes {
+    font-size: 25px;
+    color: black;
+}
+
+.parrafo-imagenes {
+    font-size: 16px;
+}
+
+#imagen-somos {
+    background-size: cover
+}
+
+.contenedor-somos {
+    padding-top: 50px;
+}
+
+.parrafo-somos2 {
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    padding: 20px 45px;
+}
+
+
+/* ===========================
+   RESPONSIVE PARA MÓVILES
+=========================== */
+@media (max-width: 768px) {
+
+    /* Imagen de fondo */
+    #imagen-somos{
+        min-height: 100%;
+        object-fit: cover;
+    }
+
+    /* Overlay */
+    .card-img-overlay{
+        padding: 20px;
+    }
+
+    /* Título */
+    #titulo-somos{
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Primer párrafo */
+    #texto-somos{
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+
+    /* Párrafos */
+    .parrafo-somos{
+        font-size: .95rem;
+        line-height: 1.7;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+    /* Tarjetas */
+    .card{
+        margin-bottom: 20px;
+    }
+
+    /* Imágenes de las tarjetas */
+    .imagen-somos{
+        height: 180px;
+        object-fit: cover;
+    }
+
+    /* Títulos de las tarjetas */
+    .titulo-imagenes{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    /* Texto de las tarjetas */
+    .parrafo-imagenes{
+        font-size: .9rem;
+        text-align: justify;
+    }
+
+}
+
+
+
 .card {
     border-radius: 0 !important;
 }

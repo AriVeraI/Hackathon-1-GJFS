@@ -1,3 +1,28 @@
+document.addEventListener("DOMContentLoaded", () => {
+    cargarSomos();
+});
+async function cargarSomos() {
+    const contenedorSomos = document.getElementById("acerca-de-nosotros");
+    
+    if (!contenedorSomos) {
+        console.warn("No se encontró el contenedor con el ID 'somos'.");
+        return;
+    }
+    try {
+        const respuesta = await fetch("acerca-de-nosotros.html");
+        
+        if (!respuesta.ok) {
+            throw new Error(`Error al cargar el acerca de nosotros: ${respuesta.status} ${respuesta.statusText}`);
+        }
+        
+        const html = await respuesta.text();
+        contenedorSomos.innerHTML = html;
+        
+    } catch (error) {
+        console.error("Hubo un problema al cargar el archivo de Acerca de nosotros:", error);
+        contenedorSomos.innerHTML = `<div class="alert alert-danger m-3">Error al cargar acerca de nosotros.</div>`;
+    }
+}
 // document.addEventListener("DOMContentLoaded", () => {
 //     cargarServiciosTestimonios();
 // });
