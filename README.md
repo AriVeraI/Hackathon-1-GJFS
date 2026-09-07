@@ -12,7 +12,7 @@ Las tiendas de comercio electrónico y las marcas emergentes necesitan una prese
 ## 👥 Contribución del Equipo (Lo que hizo cada quien)
 El desarrollo del proyecto se organizó de manera modular mediante ramas de trabajo en Git:
 
-* **Ariadna Vera:** Coordinación general del proyecto (Scrum Master), desarrollo del componente de pie de página (`Footer_Ari`), integración de componentes asíncronos, ajustes finales y control de versiones en el repositorio principal.
+* **Ariadna Vera:** Coordinación general del proyecto (Scrum Master), desarrollo del componente de pie de página (`Footer_Ari`), ajustes finales y control de versiones en el repositorio principal.
 * **Maribel:** Desarrollo e implementación de la sección de contacto (`contacto/Maribel`).
 * **Karen:** Creación y estructuración de la sección "Acerca de nosotros" (`karen-acercaDe`).
 * **Iran:** Desarrollo del módulo de precios y planes de la tienda (`Iran-Precios`).
