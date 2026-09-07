@@ -10,12 +10,14 @@ Las tiendas de comercio electrónico y las marcas emergentes necesitan una prese
 ---
 
 ## 👥 Contribución del Equipo (Lo que hizo cada quien)
-El desarrollo de la landing page se coordinó de manera colaborativa:
+El desarrollo del proyecto se organizó de manera modular mediante ramas de trabajo en Git:
 
-* **Ariadna Vera:** Coordinación general del equipo mediante Scrum, ajustes finales de integración, estructuración y control del repositorio.
-* **Integrantes del Equipo (Vexa):** * Desarrollo modular de las vistas HTML independientes (`nav.html`, `inicio.html`, `acerca-de-nosotros.html`, `precios.html`, `serviciostestimonios.html`, `contacto.html`, `footer.html`).
-  * Integración de estilos y componentes responsivos con Bootstrap.
-  * Lógica de programación en JavaScript para la interactividad de la tienda.
+* **Ariadna Vera:** Coordinación general del proyecto (Scrum Master), desarrollo del componente de pie de página (`Footer_Ari`), integración de componentes asíncronos, ajustes finales y control de versiones en el repositorio principal.
+* **Maribel:** Desarrollo e implementación de la sección de contacto (`contacto/Maribel`).
+* **Karen:** Creación y estructuración de la sección "Acerca de nosotros" (`karen-acercaDe`).
+* **Iran:** Desarrollo del módulo de precios y planes de la tienda (`Iran-Precios`).
+* **Yazmin:** Implementación de servicios y elementos interactivos adicionales.
+* **Missael:** Configuración de la estructura base del sitio y navegación inicial.
 
 ---
 
