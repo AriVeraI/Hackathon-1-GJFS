@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VEXA | Movimiento que inspira</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#404c00",
+                        "tertiary": "#b7d334",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-background": "#e4e2e1",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "surface-variant": "#353535",
+                        "on-primary-fixed-variant": "#474746",
+                        "primary-fixed": "#e5e2e1",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-surface-variant": "#c4c7c7",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#454747",
+                        "tertiary-fixed-dim": "#b7d334",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-error": "#690005",
+                        "inverse-surface": "#e4e2e1",
+                        "error": "#ffb4ab",
+                        "primary-container": "#1a1a1a",
+                        "on-tertiary-fixed": "#181e00",
+                        "primary": "#c8c6c5",
+                        "on-secondary-container": "#b4b5b5",
+                        "surface-container-low": "#1b1c1c",
+                        "outline-variant": "#444748",
+                        "surface-container": "#1f2020",
+                        "on-tertiary-container": "#778c00",
+                        "background": "#131313",
+                        "secondary": "#c6c6c7",
+                        "surface": "#131313",
+                        "surface-bright": "#393939",
+                        "on-surface": "#e4e2e1",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "inverse-primary": "#5f5e5e",
+                        "surface-tint": "#c8c6c5",
+                        "outline": "#8e9192",
+                        "on-primary": "#313030",
+                        "tertiary-container": "#171d00",
+                        "surface-dim": "#131313",
+                        "tertiary-fixed": "#d2ef50",
+                        "surface-container-highest": "#353535",
+                        "on-tertiary": "#2b3400",
+                        "on-secondary": "#2f3131",
+                        "on-primary-container": "#848282",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-on-surface": "#303030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Montserrat"],
+                        "label-bold": ["Inter"],
+                        "headline-xl": ["Montserrat"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["40px", { "lineHeight": "44px", "letterSpacing": "0.05em", "fontWeight": "900" }],
+                        "label-bold": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-xl": ["48px", { "lineHeight": "52px", "letterSpacing": "0.03em", "fontWeight": "800" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-lg": ["72px", { "lineHeight": "72px", "letterSpacing": "0.05em", "fontWeight": "900" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "28px", "letterSpacing": "0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "36px", "letterSpacing": "0.03em", "fontWeight": "800" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e4e2e1;
+            overflow-x: hidden;
+        }
+        .kinetic-slant {
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+        }
+        .kinetic-slant-reverse {
+            clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+        }
+        .glass-card {
+            background: rgba(42, 42, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .portrait-grayscale {
+            filter: grayscale(100%);
+            transition: filter 0.5s ease;
+        }
+        .portrait-grayscale:hover {
+            filter: grayscale(0%);
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-tertiary selection:text-on-tertiary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background dark:bg-background border-b border-outline-variant">
+<nav class="flex justify-between items-center px-margin-desktop py-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-12">
+<img alt="VEXA" class="h-8 w-auto cursor-pointer active:scale-95 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5wj9tHqXQoFolXmLYJg-RzG3VpWPoLsWzyeKvpvTCudGEw--4Q6EXBIXpxqjJEKppo23xrgFqNP5bRZMQ7sElZvI3JmwwL5ujI1lNTm4D5oYH-c0DLSodHMmdpNte6GGEVkwbNlAGAsYgLONSE_0KJJwMKuD3fLkGrLvmBBZeYY_mMBh6JiJFmKkk-qJhsbPZI-0v1RjIBdh8re-WyuzXnsjkjM2kN61Q8JDGrCPxDg7P8VYTtJER"/>
+<div class="hidden md:flex items-center gap-8 font-label-bold text-label-bold">
+<a class="text-tertiary hover:text-tertiary transition-colors duration-300" href="#">Performance</a>
+<a class="text-on-background hover:text-tertiary transition-colors duration-300" href="#">Lifestyle</a>
+<a class="text-on-background hover:text-tertiary transition-colors duration-300" href="#">The Core</a>
+<a class="text-on-background hover:text-tertiary transition-colors duration-300" href="#">Journal</a>
+</div>
+</div>
+<div class="flex items-center gap-6 text-on-background">
+<span class="material-symbols-outlined cursor-pointer hover:text-tertiary transition-colors duration-300" data-icon="search">search</span>
+<div class="relative cursor-pointer hover:text-tertiary transition-colors duration-300" onclick="toggleCart()">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute -top-2 -right-2 bg-tertiary text-on-tertiary-fixed text-[10px] font-bold px-1 rounded-full">3</span>
+</div>
+<span class="material-symbols-outlined md:hidden" data-icon="menu">menu</span>
+</div>
+</nav>
+</header>
+<!-- Side Navigation Drawer (Cart) -->
+<div class="h-screen w-96 fixed right-0 top-0 z-[70] bg-surface-container dark:bg-surface-container border-l border-outline-variant shadow-2xl translate-x-full transition-transform duration-500 ease-in-out flex flex-col p-8" id="cart-drawer">
+<div class="flex justify-between items-center mb-12">
+<h2 class="font-display-lg text-headline-md font-bold text-tertiary">CART</h2>
+<button class="material-symbols-outlined text-on-surface hover:text-tertiary transition-colors" onclick="toggleCart()">close</button>
+</div>
+<div class="flex-grow space-y-6 overflow-y-auto pr-2">
+<!-- Cart Item -->
+<div class="flex gap-4 p-4 bg-surface-container-high rounded-lg border border-outline-variant/30">
+<div class="w-20 h-20 bg-surface-container-low shrink-0 rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A studio product shot of a minimalist, high-performance athletic sneaker in matte black with subtle neon green accents. The lighting is dramatic and sharp, emphasizing the aerodynamic texture and engineered soles. The background is a clean, dark grey gradient that matches a premium tech-focused athletic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBCp_5bblsMKTfkiwjJkWerZG-Ez-BPYuHSx4QE34PCUEsGZeN2zJyS_DzYLTW4F7lcuC0LD41b5cku-tlfSdyb1yuYYRgfvPScFj7WlqG15wceH1HsrbVyv3-hu_tYrh0FtLHOufcmDEA8uxqUTSWQUGBrEMlpZgreze9mr2snrAktywROIg6YubYd0yFG9lq3OgjHSsIN8dcahEM3FVCLBCm1KtdBkv8NjG7SxBTD7w6zede4XyM"/>
+</div>
+<div class="flex flex-col justify-between py-1">
+<span class="font-headline-md text-[14px] uppercase tracking-wider">V-Speed Gen.2</span>
+<span class="font-label-md text-on-surface-variant">$189.00</span>
+<div class="flex items-center gap-3 mt-2">
+<button class="w-6 h-6 border border-outline rounded flex items-center justify-center text-xs">-</button>
+<span class="text-xs">1</span>
+<button class="w-6 h-6 border border-outline rounded flex items-center justify-center text-xs">+</button>
+</div>
+</div>
+</div>
+<!-- More items... -->
+</div>
+<div class="mt-auto pt-8 border-t border-outline-variant">
+<div class="flex justify-between mb-4">
+<span class="font-label-md text-outline">Subtotal</span>
+<span class="font-headline-md text-[18px]">$567.00</span>
+</div>
+<button class="w-full py-4 bg-tertiary text-on-tertiary-fixed font-bold font-label-bold tracking-widest hover:bg-white transition-colors duration-300">CHECKOUT</button>
+</div>
+</div>
+<div class="fixed inset-0 bg-black/60 z-[65] hidden opacity-0 transition-opacity duration-500" id="cart-overlay" onclick="toggleCart()"></div>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg uppercase leading-none mb-6">
+                    Domina tu juego.<br/><span class="text-tertiary">Eleva tu rendimiento.</span>
+</h1>
+<p class="font-headline-md text-headline-md mb-12 opacity-80 max-w-2xl mx-auto italic">"Movimiento que inspira."</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+<button class="px-10 py-5 bg-tertiary text-on-tertiary-fixed font-display-lg text-[14px] font-black tracking-[0.2em] hover:bg-white hover:scale-105 active:scale-95 transition-all duration-300">
+                        EXPLORAR EQUIPO
+                    </button>
+<button class="px-10 py-5 border border-white text-white font-display-lg text-[14px] font-black tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-300">
+                        VER EL CORE
+                    </button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-outline" data-icon="expand_more">expand_more</span>
+</div>
+</section>
+<!-- Product Showcase (Bento/Grid) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<span class="font-label-bold text-tertiary tracking-[0.3em] uppercase mb-4 block">Engineered for Excellence</span>
+<h2 class="font-headline-xl text-headline-xl uppercase">Novedades</h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Equipamiento de alta gama diseñado para la precisión biomecánica y el estilo minimalista.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Product 1 -->
+<div class="scroll-reveal group relative aspect-[3/4] bg-surface-container-high overflow-hidden border border-outline-variant/20 hover:border-tertiary/50 transition-all duration-700">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-1000" data-alt="A professional product shot of high-tech compression wear for elite athletes. The fabric is matte black with reflective silver micro-detailing. The clothing is displayed on an invisible mannequin to show its ergonomic fit. The lighting is cinematic with deep shadows and sharp highlights, set against a dark architectural background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCjE0WO75Rkd--L0h1Sdn6bzczZO8RTOQVLLLDEDFcTqMF0BX7b_DNY4Hfh9hdRNgZDHk3sO7Vf5dG3wUrIjFtnB9-VrUmxnYJECaDcn7FIan-19yHrE21ZTqMeYLtq8QZZRS08m1fiiJpmfpT1G5AVd3L-qw52y6HiVEDKuTkvu9H6rWfvusQouBu2Fmwuq7DhQBbQKlTXCHJkHCS-NZByuXUHRxp4kfY6OGyCD8jpAJZX6ipwAmma')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 translate-y-10 group-hover:translate-y-0 transition-transform duration-500">
+<div class="flex justify-between items-end">
+<div>
+<p class="font-label-bold text-tertiary mb-1">TECH-LITE</p>
+<h3 class="font-headline-md text-white uppercase">V-Base Layer</h3>
+</div>
+<button class="bg-tertiary text-on-tertiary-fixed p-3 flex items-center justify-center hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 (Large Middle) -->
+<div class="scroll-reveal group relative aspect-[3/4] bg-surface-container-high overflow-hidden border border-outline-variant/20 hover:border-tertiary/50 transition-all duration-700">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-1000" data-alt="Close-up of premium athletic footwear in vibrant neon yellow and black. The focus is on the intricate mesh pattern and the carbon fiber sole plating. Dramatic low-angle lighting creates a sense of speed and power. High-contrast athletic aesthetic with deep blacks and intense volt neon highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBj0iXYzHkasC6gBn_f-jdLUJgdT_J3BH8UeSZ5vh_-FCho5nmfp3ny2_yl0Lumn0vooMdy5j7jMMx_fQeuhWxrxGq5OVK-ypJw41-V3jHutycGHA0Vm7xdJSrz7Gl-mci6dUG5WmHiziKeDlSBZjumRNRUi68h0c_BXpS5oWPYRT2giQFsdToRO5kMFpAR7GKUiCvNuh8vLWquVpzQ80qC_ivvhUQBUFVTPtgQeTRZEAaZEXlEO0zJ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-8">
+<div class="flex justify-between items-end">
+<div>
+<p class="font-label-bold text-tertiary mb-1">SPEED ELITE</p>
+<h3 class="font-headline-md text-white uppercase">Volt Runner X1</h3>
+</div>
+<button class="bg-tertiary text-on-tertiary-fixed px-6 py-2 font-bold uppercase text-xs hover:bg-white transition-colors">Comprar</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="scroll-reveal group relative aspect-[3/4] bg-surface-container-high overflow-hidden border border-outline-variant/20 hover:border-tertiary/50 transition-all duration-700">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-1000" data-alt="A sleek, minimalist gym bag made of waterproof matte charcoal fabric with industrial metal buckles. The design is sharp and geometric. It sits on a polished black concrete floor in a minimalist modern gym setting with vertical light strips. The mood is exclusive, high-end, and technologically superior." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChJl767ydmrn9sZ4pf5pW2Wc3CyBBJv-TjAxLJvRYlx5qOd90b1KZraTVqlV2s149FKqTR3siU4oP6kcybekPgpo2EbxfY4XHQagnMOiWB-VpHrK6GvXOr_CXasEM7FAv73MJIlrEaaOsdSRwq32C8P_FcWDp_DqxgfUPKQ8drqulK3eeouBHNFwaU7pG6hfsfwQBkAMaK43ZwhteF6HzZCj6XmfT50Km_q6r0fjbbYQ8vaeDb_mQ4')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 translate-y-10 group-hover:translate-y-0 transition-transform duration-500">
+<div class="flex justify-between items-end">
+<div>
+<p class="font-label-bold text-tertiary mb-1">MODULAR</p>
+<h3 class="font-headline-md text-white uppercase">V-Utility Pack</h3>
+</div>
+<button class="bg-tertiary text-on-tertiary-fixed p-3 flex items-center justify-center hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- "The Core" Team Section -->
+<section class="py-section-gap bg-surface-container-low kinetic-slant relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="text-center mb-20">
+<h2 class="font-display-lg text-headline-xl uppercase mb-4">THE CORE</h2>
+<div class="h-1 w-24 bg-tertiary mx-auto"></div>
+<p class="font-body-lg text-on-surface-variant mt-8 max-w-xl mx-auto">Nuestros embajadores de marca: visionarios que personifican la unión de la tecnología y la resistencia humana.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+<!-- Team Member 1 -->
+<div class="scroll-reveal group text-center">
+<div class="aspect-[4/5] overflow-hidden mb-4 border border-outline-variant/30">
+<img class="w-full h-full object-cover portrait-grayscale" data-alt="Professional studio portrait of an athletic woman in minimalist black sportswear. Her expression is focused and determined. Grayscale photography style with high contrast, dramatic shadows on one side of her face. The background is a flat dark grey." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiX8fE81qClPMKxxQG3SF7bAg_NwOVzyusTUMJO3eaH71uyfvXm1X5ZSkqTIsCAb5mcNvUGKNojQDGU5Ti0Bok9lcKsezmiJm5NbaJZLn3_GyMxKslKxqvOHp5VUIK3YzlsjABOAbsZ2Xwc_e0kldSUBXtncOKZA8xxrsFMeBqgSv2AGG7fFboYztgisTO-cGzDDoSKLIvj46a7W6ZyNMiISegKiqGWJ4ZlJ8Rce08PMXTQLl6Htzz"/>
+</div>
+<h4 class="font-headline-md text-[18px] uppercase">Elena R.</h4>
+<p class="font-label-md text-tertiary uppercase">Performance Specialist</p>
+</div>
+<!-- Team Member 2 -->
+<div class="scroll-reveal group text-center" style="transition-delay: 100ms">
+<div class="aspect-[4/5] overflow-hidden mb-4 border border-outline-variant/30">
+<img class="w-full h-full object-cover portrait-grayscale" data-alt="Professional studio portrait of a fit woman with short hair, wearing a sleek compression top. She has an intense, calm gaze. High-contrast grayscale lighting emphasizing muscle definition and bone structure. Dark, minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx-xeZwuhn5uU_mfjs9PZ_dhotZfdtuMk0G9Bb_4mO8u8pjkzOt_A_c_3JLZZFXoc7w3FBGWXAAiLgnh5QTbglAR6wEGJRHAN7ecfbaWpKF_a52IdQrd8ykB2-nWavYPORojD6oXOE4fBC6pKvpgDVRUa6tJzkjyqz5ysXy91j3eHvsgTKrUEaLO15jFRrsbcOFH9zO60r5-HzrzB3rL06qOq5sNha7IehjolX9HG89rFJlYH2dOQb"/>
+</div>
+<h4 class="font-headline-md text-[18px] uppercase">Marta S.</h4>
+<p class="font-label-md text-tertiary uppercase">Endurance Coach</p>
+</div>
+<!-- Team Member 3 (The Man) -->
+<div class="scroll-reveal group text-center" style="transition-delay: 200ms">
+<div class="aspect-[4/5] overflow-hidden mb-4 border border-outline-variant/30">
+<img class="w-full h-full object-cover portrait-grayscale" data-alt="Professional studio portrait of an athletic man with a sharp jawline in black technical athletic gear. Cinematic high-contrast black and white lighting. Strong facial features and focused expression. Minimalist dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7SkfhEeU1xQdq-hKQKlwF0k54yW4wGQ592xfuLDucWPjWE6PCtgycm6v7aeWar1Kwd57xVFI1EGh0HIgrf55hAm5z94IASWwViGanaxtdwoFLl43vRJxJZr5M90YJaemqr_BzmVfCtUjya1-pupEk29WjPA1jX-8DTo5FQOUM_az6IuE1NXjRdnX3vyhBvpDbbsXIvsTbYmfmCSbMgJpwJz8dUvR-fNUCxHrIuyK08YtOOGTkpNgR"/>
+</div>
+<h4 class="font-headline-md text-[18px] uppercase">Julian V.</h4>
+<p class="font-label-md text-tertiary uppercase">Lead Engineer</p>
+</div>
+<!-- Team Member 4 -->
+<div class="scroll-reveal group text-center" style="transition-delay: 300ms">
+<div class="aspect-[4/5] overflow-hidden mb-4 border border-outline-variant/30">
+<img class="w-full h-full object-cover portrait-grayscale" data-alt="Professional studio portrait of an athletic woman with tied-back hair. She wears a minimalist dark performance shirt. Grayscale with deep blacks and crisp white highlights. The mood is elite, focused, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE8CXtTorgK6VIo6WXYLPCzA_1PoBlDxZV77OWa21bsq8Xhwhxo2d2F8vO_4Yuy-9MNF6WNQ7Bjm9wQ7hiaForeKuILc9BLllNoZ_G17yikJmAndU8656skZLFp_VMA0jfuMzdoCwMf89h3AOshMCbi490viJOaxaKy4KOcofE3p_VkNT9-ccQXFRfgzIeINMc7sTYwfWSzzcMtrIBwP6nnJOlJvRG5hrFOV7w_Ws4HKX9XnxCsSkT"/>
+</div>
+<h4 class="font-headline-md text-[18px] uppercase">Sofia K.</h4>
+<p class="font-label-md text-tertiary uppercase">Biomechanics</p>
+</div>
+<!-- Team Member 5 -->
+<div class="scroll-reveal group text-center" style="transition-delay: 400ms">
+<div class="aspect-[4/5] overflow-hidden mb-4 border border-outline-variant/30">
+<img class="w-full h-full object-cover portrait-grayscale" data-alt="Professional studio portrait of a determined athletic woman. Strong lighting from the side creating dramatic shadows. Black and white high-contrast photography. Elegant yet powerful sports aesthetic. Dark grey background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpz5wMigC584PzZw-9iY3jqgOWSNGLdAdjyOdVvJJCKrytWlTIoHtoYYihIRl3ZWVkL92Fnl9DyyV2UcUsQk97wI-EnLGuCsce8r7V4_epd8jg6_PqZgUwigf9JNGOc_KZaibZ575_Hde7eD2XBZUPkj0Mh_9YHFXDgiaqRdyJ2BRB8V6AZzWPCkd0ZBn-xc5Ml8PIViJcvKntr0d1-xjHc9nA8doxYJ6erlayeY9FuDFZG_XPc9Zf"/>
+</div>
+<h4 class="font-headline-md text-[18px] uppercase">Lara P.</h4>
+<p class="font-label-md text-tertiary uppercase">Design Lead</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="glass-card p-12 md:p-24 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-symbols-outlined text-[100px] text-tertiary/10 rotate-12" data-icon="bolt">bolt</span>
+</div>
+<h2 class="font-display-lg text-headline-lg md:text-headline-xl uppercase mb-8">Únete a la Evolución</h2>
+<p class="font-body-lg text-on-surface-variant mb-12 max-w-lg mx-auto">Sé el primero en recibir acceso exclusivo a lanzamientos limitados y avances tecnológicos.</p>
+<div class="flex flex-col md:flex-row gap-0 max-w-xl mx-auto border border-outline-variant">
+<input class="flex-grow bg-transparent border-none p-4 font-label-bold text-white focus:ring-1 focus:ring-tertiary transition-all" placeholder="EMAIL ADDRESS" type="email"/>
+<button class="bg-tertiary text-on-tertiary-fixed font-bold px-12 py-4 uppercase hover:bg-white transition-colors">Suscribirse</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-desktop gap-gutter max-w-container-max mx-auto mb-12">
+<div class="space-y-6">
+<img alt="VEXA" class="h-10 w-auto brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5wj9tHqXQoFolXmLYJg-RzG3VpWPoLsWzyeKvpvTCudGEw--4Q6EXBIXpxqjJEKppo23xrgFqNP5bRZMQ7sElZvI3JmwwL5ujI1lNTm4D5oYH-c0DLSodHMmdpNte6GGEVkwbNlAGAsYgLONSE_0KJJwMKuD3fLkGrLvmBBZeYY_mMBh6JiJFmKkk-qJhsbPZI-0v1RjIBdh8re-WyuzXnsjkjM2kN61Q8JDGrCPxDg7P8VYTtJER"/>
+<p class="font-label-md text-outline max-w-xs">Elevando el potencial humano a través del diseño y la ingeniería de vanguardia.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="flex flex-col gap-4">
+<span class="font-label-bold text-white uppercase tracking-widest">Shop</span>
+<a class="font-label-md text-outline hover:text-tertiary transition-colors" href="#">Performance</a>
+<a class="font-label-md text-outline hover:text-tertiary transition-colors" href="#">Lifestyle</a>
+<a class="font-label-md text-outline hover:text-tertiary transition-colors" href="#">Accessories</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-bold text-white uppercase tracking-widest">Brand</span>
+<a class="font-label-md text-outline hover:text-tertiary transition-colors" href="#">The Core</a>
+<a class="font-label-md text-outline hover:text-tertiary transition-colors" href="#">Journal</a>
+<a class="font-label-md text-outline hover:text-tertiary transition-colors" href="#">Sustainability</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-bold text-white uppercase tracking-widest">Help</span>
+<a class="font-label-md text-outline hover:text-tertiary transition-colors" href="#">Support</a>
+<a class="font-label-md text-outline hover:text-tertiary transition-colors" href="#">Shipping</a>
+<a class="font-label-md text-outline hover:text-tertiary transition-colors" href="#">Returns</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-bold text-white uppercase tracking-widest">Follow</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-outline hover:text-tertiary cursor-pointer" data-icon="public">public</span>
+<span class="material-symbols-outlined text-outline hover:text-tertiary cursor-pointer" data-icon="share">share</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-gutter max-w-container-max mx-auto pt-8 border-t border-outline-variant/30">
+<span class="font-label-md text-outline uppercase tracking-widest">© 2024 VEXA PERFORMANCE LABS</span>
+<div class="flex gap-8">
+<a class="font-label-md text-outline hover:text-on-surface transition-colors" href="#">Privacy</a>
+<a class="font-label-md text-outline hover:text-on-surface transition-colors" href="#">Terms</a>
+<a class="font-label-md text-outline hover:text-on-surface transition-colors" href="#">Cookies</a>
+</div>
+</div>
+</footer>
+<script>
+        // Cart Side Drawer Logic
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            const overlay = document.getElementById('cart-overlay');
+            const isHidden = drawer.classList.contains('translate-x-full');
+            
+            if (isHidden) {
+                drawer.classList.remove('translate-x-full');
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.classList.add('opacity-100'), 10);
+                document.body.style.overflow = 'hidden';
+            } else {
+                drawer.classList.add('translate-x-full');
+                overlay.classList.remove('opacity-100');
+                setTimeout(() => overlay.classList.add('hidden'), 500);
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Scroll Reveal Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        // Subtle Parallax effect on Hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroText = document.querySelector('h1');
+            heroText.style.transform = `translateY(${scrolled * 0.2}px)`;
+        });
+    </script>
+</body></html>
